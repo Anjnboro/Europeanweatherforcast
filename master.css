@@ -1,0 +1,356 @@
+body {
+    margin: 0;
+        padding: 0;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Ensure it's behind your content */
+}
+h1 {
+    text-align: center;
+        font-size: 70px;
+        background: linear-gradient(to left,
+                violet,
+                indigo,
+                blue,
+                green,
+                yellow,
+                orange,
+                red);
+        -webkit-background-clip: text;
+        color: transparent;
+}
+
+h3 {
+    color: #19fb28;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: inherit;
+    font-display: Block;
+}
+
+h4 {
+    color: #fc0505;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-style: inherit;
+    font-display: Block;
+    }
+
+label {
+    font-family: "Poppins", sans-serif;
+    color: #1df2f0;
+    font-weight: bold;
+}
+
+#forecast {
+    display: flex;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+#forecast img {
+    width: 150px;
+    height: 50px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: .2rem 0;
+}
+
+.box {
+    width: 100%;
+    padding: 1rem;
+    background-color: turquoise;
+    border: 2px solid rgba(17, 215, 255, 0.981);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease .5s;
+}
+
+.box:hover {
+    box-shadow: 0px 0px 20px 1px #0704023f;
+    border: 4px solid rgba(27, 251, 7, 0.749);
+}
+
+.cta {
+    display: inline-flex;
+    /* Keep the button inline with the text */
+    padding: 5px 15px;
+    /* Adjust padding for size */
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    /* Adjust size to match surrounding text */
+    color: white;
+    background: #6225e6;
+    transition: 1s;
+    box-shadow: 3px 3px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+    cursor: pointer;
+}
+
+.cta:focus {
+    outline: none;
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 5px 5px 0 #fbc638;
+}
+
+.span {
+    transform: skewX(15deg);
+}
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: #fbc638;
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+
+
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    /* Darken background */
+    z-index: 9999;
+    /* Ensure it is above other content */
+    visibility: hidden;
+    /* Initially hidden */
+}
+
+.pl {
+    width: 6em;
+    height: 6em;
+}
+
+.pl__ring {
+    animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+    stroke: #f42f25;
+}
+
+.pl__ring--b {
+    animation-name: ringB;
+    stroke: #f49725;
+}
+
+.pl__ring--c {
+    animation-name: ringC;
+    stroke: #255ff4;
+}
+
+.pl__ring--d {
+    animation-name: ringD;
+    stroke: #f42582;
+}
+
+@keyframes ringA {
+    /* Keep the animation keyframes you provided */
+}
+
+@keyframes ringB {
+    /* Keep the animation keyframes you provided */
+}
+
+@keyframes ringC {
+    /* Keep the animation keyframes you provided */
+}
+
+@keyframes ringD {
+    /* Keep the animation keyframes you provided */
+}
+
+
+/* Get Weather Button Design - Glitch Effect */
+button,
+button::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+}
+
+button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'GLITCH';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+}
+
+button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+}
+
+@keyframes glitch_4011 {
+    0% {
+        clip-path: var(--move1);
+        transform: translate(0px, -10px);
+    }
+
+    10% {
+        clip-path: var(--move2);
+        transform: translate(-10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--move3);
+        transform: translate(10px, 0px);
+    }
+
+    30% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    40% {
+        clip-path: var(--move5);
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        clip-path: var(--move6);
+        transform: translate(-10px, 10px);
+    }
+
+    60% {
+        clip-path: var(--move1);
+        transform: translate(10px, -10px);
+    }
+
+    70% {
+        clip-path: var(--move3);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--move2);
+        transform: translate(10px, -10px);
+    }
+
+    90% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    100% {
+        clip-path: var(--move1);
+        transform: translate(0);
+    }
+}
+
+
+.git {
+        background-color: transparent;
+        padding: 5px;
+        position: relative;
+        width: 7.2em;
+        height: 2em;
+        transition: 0.5s;
+        font-size: 17px;
+}
+
+.git p {
+    position: absolute;
+        top: 0.4em;
+        left: 1.2em;
+        margin: 0;
+        padding: 0;
+        transition: .5s;
+        color: transparent;
+}
+
+.git svg {
+    position: absolute;
+        top: 0.45em;
+        right: 0.5em;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: 0.5s;
+        height: 1em;
+        fill: #fff
+}
+
+.git:hover p {
+    left: 0.6em;
+        color: #fff
+}
+
+.git:hover svg {
+    left: 0.6em;
+        color: #fff
+}
+
+.git:hover svg {
+    opacity: 1;
+}
+
+.git:hover {
+    background-color: black;
+}
