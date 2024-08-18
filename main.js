@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Make API request to 7Timer
       fetch(
-        `http://www.7timer.info/bin/api.pl?lon=${coords.lon}&lat=${coords.lat}&product=civillight&output=json`
+        `https://www.7timer.info/bin/api.pl?lon=${coords.lon}&lat=${coords.lat}&product=civillight&output=json`
       )
         .then((response) => response.json())
         .then((data) => {
